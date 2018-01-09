@@ -1,5 +1,3 @@
-import { ServerRequest } from 'http';
-
 const express = require('express')
 const restful = require('node-restful')
 const server = express()
@@ -12,8 +10,8 @@ mongoose.Promise = global.Promise
 mongoose.connect('mongodb://db/mydb')
 
 // Teste
-server.get('/', (req, res, next) => res.send('Backend'))
-/*
+//server.get('/', (req, res, next) => res.send('Backend'))
+
 // Muiddlewares
 server.use(bodyParser.urlencoded({extended:true}))
 server.use(bodyParser.json())
@@ -30,6 +28,6 @@ Client.updateOptions({new: true, runValidators: true})
 
 // Routes
 Client.register(server, '/clients')
-*/
+
 // Start Server
 server.listen(3000)
